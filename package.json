@@ -1,6 +1,8 @@
 {
-  "name": "squadcart-ecommerce-frontend",
-  "version": "0.1.0",
+  "name": "ayashmart-ecommerce-frontend",
+  "version": "1.0.0",
+  "description": "AyashMart — Modern, fast and secure e-commerce platform for electronics and smart gadgets in Bangladesh",
+  "author": "Aftab Farhan ARKO",
   "private": true,
   "scripts": {
     "dev": "next dev",

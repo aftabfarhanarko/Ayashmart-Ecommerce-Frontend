@@ -58,11 +58,11 @@ const Footer = () => {
     };
   }, [companyId]);
 
-  const companyName = companyInfo?.companyName || "SquadCart";
+  const companyName = companyInfo?.companyName || "AyashMart";
   const branchLocation =
-    companyInfo?.branchLocation || "123 Business Avenue, Digital City, Worldwide.";
-  const phone = companyInfo?.phone || "(+880) 1774 617 452";
-  const email = companyInfo?.email || "support@squadcart.com";
+    companyInfo?.branchLocation || "Dhaka, Bangladesh";
+  const phone = companyInfo?.phone || "+8801613410880";
+  const email = companyInfo?.email || "support@ayashmart.com";
   const logoSrc = companyInfo?.companyLogo;
   
   const fallbackCategories = [
@@ -85,9 +85,13 @@ const Footer = () => {
               {logoSrc ? (
                 <Image src={logoSrc} alt="logo" width={150} height={60} unoptimized className="brightness-200" />
               ) : (
-                <div className="text-white text-3xl font-black italic tracking-tighter">
-                    SQUAD<span className="text-primary">CART</span>
-                </div>
+                <Image
+                  src="/image.png"
+                  alt="AyashMart Logo"
+                  width={180}
+                  height={45}
+                  className="h-10 w-auto object-contain brightness-0 invert"
+                />
               )}
             </Link>
             <p className="text-sm leading-relaxed">

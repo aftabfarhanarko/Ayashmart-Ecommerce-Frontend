@@ -36,11 +36,16 @@ const Header = () => {
       <div className="max-w-7xl px-6 mx-auto flex items-center justify-between gap-8 py-3">
         {/* Logo */}
         <Link href="/" className="flex-shrink-0 transition-transform hover:scale-105 active:scale-95">
-            <div className="flex items-center">
-                <div className="text-gray-900 text-2xl font-black italic tracking-tighter">
-                   SQUAD<span className="text-primary">CART</span>
-                </div>
-            </div>
+          <div className="flex items-center">
+            <Image
+              src="/image.png"
+              alt="AyashMart Logo"
+              width={160}
+              height={38}
+              priority
+              className="h-9 w-auto object-contain"
+            />
+          </div>
         </Link>
 
         {/* Search Bar - Premium Style */}

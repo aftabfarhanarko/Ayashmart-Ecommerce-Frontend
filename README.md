@@ -6,7 +6,7 @@
 
 **A modern, fast and secure e-commerce platform for premium electronics, smart gadgets and accessories in Bangladesh.**
 
-<sub>🚀 Developed by <b>FTB Farhaa</b></sub>
+<sub>🚀 Developed by <b>Aftab Farhan ARKO</b></sub>
 
 [![Live Site](https://img.shields.io/badge/Live-ayashmart.com-e11d1d?style=for-the-badge)](https://ayashmart.com)
 [![Next.js](https://img.shields.io/badge/Next.js-black?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org)

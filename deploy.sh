@@ -1,22 +1,16 @@
 #!/bin/bash
 # ──────────────────────────────────────────────────────────
-# SquadCart — Production Deploy Script
+# AyashMart — Production Deploy Script 🚀
 # ──────────────────────────────────────────────────────────
 #
-# This script does EVERYTHING:
-#   1. Builds Console SPA (base: /console/)
-#   2. Starts all Docker containers (DB, API, Landing, Themes, Nginx)
+# This script manages the production deployment for AyashMart:
+#   1. Builds and starts Docker containers
+#   2. Verifies environment variables and server health
 #
 # Usage:
 #   chmod +x deploy.sh      (first time only)
-#   ./deploy.sh             (deploy everything)
-#   ./deploy.sh --rebuild   (force rebuild all Docker images)
-#
-# After deploy, access at:
-#   Landing:  http://localhost
-#   Console:  http://localhost/console/
-#   API:      http://localhost/api/
-#   Themes:   http://localhost:3001
+#   ./deploy.sh             (deploy application)
+#   ./deploy.sh --rebuild   (force rebuild Docker images)
 #
 # ──────────────────────────────────────────────────────────
 
@@ -31,7 +25,7 @@ NC='\033[0m' # No Color
 
 echo ""
 echo -e "${BLUE}╔═══════════════════════════════════════════╗${NC}"
-echo -e "${BLUE}║     🚀 SquadCart Production Deploy        ║${NC}"
+echo -e "${BLUE}║     🚀 AyashMart Production Deploy        ║${NC}"
 echo -e "${BLUE}╚═══════════════════════════════════════════╝${NC}"
 echo ""
 

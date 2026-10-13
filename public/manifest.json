@@ -1,0 +1,26 @@
+{
+  "name": "AyashMart — Premium Electronics & Smart Gadgets",
+  "short_name": "AyashMart",
+  "description": "A modern, fast and secure e-commerce platform for premium electronics, smart gadgets and accessories in Bangladesh.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#e11d1d",
+  "icons": [
+    {
+      "src": "/image.png",
+      "sizes": "780x160",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

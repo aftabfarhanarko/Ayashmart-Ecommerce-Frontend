@@ -1,34 +1,100 @@
-# SquadCart Themes — Change Log
+<div align="center">
 
-> বিস্তারিত প্রজেক্ট হিস্ট্রি — সর্বশেষ থেকে সর্বপ্রথম
+<img src="https://ayashmart.com/logo-primary.png" alt="AyashMart Logo" width="320" />
 
----
+# AyashMart — Release Changelog 📝
 
-## v1.2.0 — Build Crash Fixes (2026-02-28)
+**Chronological release notes, improvements, and architectural milestones for AyashMart.**
 
-**বাগ ফিক্স:**
+<sub>🚀 Developed by <b>Aftab Farhan ARKO</b></sub>
 
-- **Apollo GraphQL Build Issue:** `src/themes/default/app/flashSell/all/page.tsx` এবং `FlashSaleProduct.tsx` এ `client.query` গুলোকে `try/catch` ব্লকের মাঝে wrap করা হয়েছে।
-- _কারণ:_ Next.js build-এর সময় GraphQL সার্ভার এভেইলেবল না থাকার কারণে `ECONNREFUSED` error থ্রো করে বিল্ড ফেইল হচ্ছিল।
+[![Live Site](https://img.shields.io/badge/Live-ayashmart.com-e11d1d?style=for-the-badge)](https://ayashmart.com)
+[![Next.js](https://img.shields.io/badge/Next.js-14_App_Router-black?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org)
+[![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com)
+[![Node.js](https://img.shields.io/badge/Node.js-v22_LTS-339933?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org)
 
----
+[Main README](./README.md) · [Deployment Guide](./DEPLOYMENT.md) · [Docker Instructions](./DOCKER_INSTRUCTIONS.md)
 
-## v1.1.0 — Multi-Theme & Server-side Tenancy (2026-02-27)
-
-**নতুন আর্কিটেকচার:**
-
-- **`src/themes` Directory:** প্রজেক্টের কোর আর্কিটেকচার রিফ্যাক্টর করে সব থিম `src/themes/` ফোল্ডারে নিয়ে আসা হয়েছে।
-- **Server Components Multi-Tenancy:**
-  - `getSystemUserByCompanyId(companyId)` ফাংশন যোগ করা হয়েছে।
-  - প্রতিটি page-route অনুযায়ী ডাইনামিকভাবে থিম লোড করানো হচ্ছে।
-- **Global Headers (Axios):** Backend request-এর সময় globally `x-tenant-domain` হেডার যুক্ত করার লজিক ইমপ্লিমেন্ট করা হয়েছে।
+</div>
 
 ---
 
-## v1.0.0 — Basic Store Frontend (2026-02-25)
+## 📖 Table of Contents
 
-**প্রধান আপডেট:**
+- [v1.3.0 — Production Hardening & Documentation Overhaul (2026-10)](#v130--production-hardening--documentation-overhaul-2026-10)
+- [v1.2.0 — Build Crash Fixes & Error Handling (2026-02)](#v120--build-crash-fixes--error-handling-2026-02)
+- [v1.1.0 — Architecture Refactor & Performance Optimization (2026-02)](#v110--architecture-refactor--performance-optimization-2026-02)
+- [v1.0.0 — Initial AyashMart Storefront Release (2026-02)](#v100--initial-ayashmart-storefront-release-2026-02)
+- [Developer](#-developer)
+- [License](#-license)
 
-- বেসিক ই-কমার্স থিম স্ট্রাকচার, checkout page error resolution, এবং লিন্টিং ইশ্যু ফিক্স করা হয়েছে।
-- Checkout পেইজে Variable redeclaration (`let name ...`) জনিত সমস্যা সমাধান করা হয়েছে।
-- `node:22-alpine` Dockerfile base-image এবং `output: 'standalone'` কনফিগার করা হয়েছে।
+---
+
+## v1.3.0 — Production Hardening & Documentation Overhaul (2026-10)
+
+### 🚀 Highlights & Features
+- **Docker Production Pipeline:** Polished `node:22-alpine` multi-stage build with unprivileged runner user and `.next/standalone` output optimization.
+- **Hostinger VPS & Nginx Automation:** Complete automated deployment guidelines with Nginx reverse proxy, Certbot SSL auto-renewal, and UFW firewall hardening.
+- **Turbopack Dev Workflow:** Standardized `npm run dev -- --turbo` to avoid Webpack CSS parsing conflicts with `animate.css`.
+- **Standardized Documentation Suite:** Unified all repository markdown documentation (`README.md`, `DEPLOYMENT.md`, `DOCKER_INSTRUCTIONS.md`, `DOCKER.md`, `MIGRATION.md`, `INTEGRATION_NOTES.md`, `CHANGELOG.md`).
+
+---
+
+## v1.2.0 — Build Crash Fixes & Error Handling (2026-02)
+
+### 🐛 Bug Fixes & Stability
+- **Apollo GraphQL Build Resilience:** Wrapped `client.query` calls in `try/catch` handlers within Flash Sale and product list pages to prevent build-time crashes (`ECONNREFUSED`) when backend is unreachable during static pre-rendering.
+- **Checkout Page Safety:** Resolved variable shadowing and redeclaration anomalies in checkout and order flow components.
+- **Type Safety Enhancements:** Updated TypeScript configurations and cleaned linting errors across App Router layouts.
+
+---
+
+## v1.1.0 — Architecture Refactor & Performance Optimization (2026-02)
+
+### ⚡ Architectural Enhancements
+- **Dynamic Routing & Components:** Refactored storefront layout into clean modular components for Category browsing, Hero Carousels, and Featured Collections.
+- **Axios API Layer:** Unified global HTTP request handling with standard API client services and configurable backend URLs.
+- **Asset Optimization:** Integrated Next.js Image optimization and WebP caching for fast image loading.
+
+---
+
+## v1.0.0 — Initial AyashMart Storefront Release (2026-02)
+
+### 🛍️ Storefront Launch
+- **Next.js 14 App Router:** Modern frontend architecture with responsive design for mobile, tablet, and desktop shoppers.
+- **Catalog & Discovery:** Dynamic product listings, category pages, flash sale countdown timers, and search.
+- **Cart & Checkout Experience:** Integrated shopping cart, local state management, and streamlined checkout UI.
+- **Trust & Compliance Pages:** Added Terms of Service, Privacy Policy, Return & Refund Policy, and WhatsApp customer support links.
+
+---
+
+## 📞 Contact
+
+**AyashMart**
+
+- 🌐 Website: [ayashmart.com](https://ayashmart.com)
+- 💬 WhatsApp: [Chat with us](https://wa.me/+8801613410880)
+
+---
+
+## 👨‍💻 Developer
+
+This project is designed and developed by **Aftab Farhan ARKO**.
+
+---
+
+## 📄 License
+
+© 2026 AyashMart. All rights reserved.
+
+This is proprietary software. Unauthorized copying, distribution or modification of this project is strictly prohibited.
+
+---
+
+<div align="center">
+
+**Made with ❤️ for AyashMart**
+
+Developed by **Aftab Farhan ARKO**
+
+</div>
